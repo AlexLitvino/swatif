@@ -1,0 +1,44 @@
+
+[23:9:11.512929] Verify that element with locator_type = 'css selector' and locator = 'div.form div.ok input' contains attribute 'type' with value 'submit'
+[23:9:11.555931] RESULT: PASS
+
+
+[23:9:15.837175] Verify that page URL is 'http://www.openforbeta.com/account'.
+[23:9:15.861176] EXPECTED: http://www.openforbeta.com/account
+[23:9:15.861176] OBSERVED: http://www.openforbeta.com/account
+[23:9:15.861176] RESULT: PASS
+
+
+[23:9:15.862177] Verify that page title is 'Open for Beta - My Account'.
+[23:9:15.868177] EXPECTED: Open for Beta - My Account
+[23:9:15.869177] OBSERVED: Open for Beta - My Account
+[23:9:15.869177] RESULT: PASS
+
+[23:9:29.539959] Traceback (most recent call last):
+  File "C:/Python33/prg_pyt33/swatif/Tests/loginPageTest_example.py", line 87, in <module>
+    login_page.login(registered_username, "")
+  File "C:\Python33\prg_pyt33\swatif\Pages\LoginPage.py", line 55, in login
+    self.username_field.send_keys(username)
+  File "C:\Python33\prg_pyt33\swatif\Pages\LoginPage.py", line 19, in username_field
+    return self._driver.find_element_by_css_selector("form#loginform div.form div.champ input[name = 'lusername']")
+  File "C:\Python33\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 374, in find_element_by_css_selector
+    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
+  File "C:\Python33\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 662, in find_element
+    {'using': by, 'value': value})['value']
+  File "C:\Python33\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 173, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python33\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 166, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: 'Unable to locate element: {"method":"css selector","selector":"form#loginform div.form div.champ input[name = \'lusername\']"}' ; Stacktrace: 
+    at FirefoxDriver.prototype.findElementInternal_ (file:///c:/users/_intel_/appdata/local/temp/tmpv2dfec/extensions/fxdriver@googlecode.com/components/driver-component.js:9618:26)
+    at FirefoxDriver.prototype.findElement (file:///c:/users/_intel_/appdata/local/temp/tmpv2dfec/extensions/fxdriver@googlecode.com/components/driver-component.js:9627:3)
+    at DelayedCommand.prototype.executeInternal_/h (file:///c:/users/_intel_/appdata/local/temp/tmpv2dfec/extensions/fxdriver@googlecode.com/components/command-processor.js:11612:16)
+    at DelayedCommand.prototype.executeInternal_ (file:///c:/users/_intel_/appdata/local/temp/tmpv2dfec/extensions/fxdriver@googlecode.com/components/command-processor.js:11617:7)
+    at DelayedCommand.prototype.execute/< (file:///c:/users/_intel_/appdata/local/temp/tmpv2dfec/extensions/fxdriver@googlecode.com/components/command-processor.js:11559:5) 
+
+
+[23:9:29.663966] TEST COMPLETE:
+[23:9:29.663966] TESTS PASSED: 3
+[23:9:29.663966] TESTS FAILED: 0
+[23:9:29.663966] TESTS SKIPPED: 0
+
